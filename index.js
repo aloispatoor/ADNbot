@@ -3,8 +3,13 @@ const path = require('node:path');
 const { Client, Events, GatewayIntentBits, Collection } = require("discord.js");
 const { token } = require('./config.json');
 
+// INITIALIZING CLIENT
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 client.commands = new Collection();
+
+client.once('ready', () => {
+   console.log("Félicitations, votre bot Discord a été correctement initialisé !");
+});
 
 // INITIALIZING COMMANDS
 const commandsPath = path.join(__dirname, 'commands');
@@ -34,10 +39,6 @@ client.on(Events.InteractionCreate, async interaction => {
    } catch (error) {
       await interaction.reply({ content: 'Il y a eu une erreur en executant cette commande !', ephemeral: true});
    }
-});
-
-client.once('ready', () => {
-   console.log("Félicitations, votre bot Discord a été correctement initialisé !");
 });
 
 client.login(token);
