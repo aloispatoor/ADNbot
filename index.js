@@ -23,11 +23,12 @@ client.on("messageCreate", message => {
    }
    console.log(message);
    if(message.content === "Qui est l'antechrist ?"){
-      message.reply("<@" + "703541820201893930" + "> est l'antechrist selon Civitas");
+      message.reply("<@" + "703541820201893930" + "> est l'antechrist ⛧⛧⛧");
+   } else if(message.content === "Tu connais la blague de la chaise ?"){
       // SEND A MESSAGE WITHOUT @ 
-      // message.channel.send("pong");
+      message.channel.send("Elle est pliante");
    } else if(message.content === "help"){
-      message.reply("Mes commandes sont : \n Savoir 'Qui est l'antechrist ?' \n C'est tout, pour le moment.");
+      message.reply("Mes commandes sont : \n Savoir 'Qui est l'antechrist ?' \n Savoir si 'Tu connais la blague de la chaise ?' \n C'est tout, pour le moment.");
    }
 });
 
