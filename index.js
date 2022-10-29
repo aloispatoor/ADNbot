@@ -22,13 +22,13 @@ client.on("messageCreate", message => {
       return;
    }
    console.log(message);
-   if(message.content === "Qui est l'antechrist ?"){
+   if(message.content === "Qui est l'antechrist ?" || message.content === "Qui est l'antéchrist ?"){
       message.reply("<@" + "703541820201893930" + "> est l'antechrist ⛧⛧⛧");
    } else if(message.content === "Tu connais la blague de la chaise ?"){
       // SEND A MESSAGE WITHOUT @ 
       message.channel.send("Elle est pliante");
    } else if(message.content === "help"){
-      message.reply("Mes commandes sont : \n Savoir 'Qui est l'antechrist ?' \n Savoir si 'Tu connais la blague de la chaise ?' \n C'est tout, pour le moment.");
+      message.reply("Mes commandes sont : \n 'Qui est l'antechrist ?' \n 'Tu connais la blague de la chaise ?' \n C'est tout, pour le moment.");
    }
 });
 
