@@ -1,5 +1,3 @@
-// const fs = require('node:fs');
-// const path = require('node:path');
 const { Client, Events, GatewayIntentBits, Collection, WelcomeChannel } = require("discord.js");
 const { token } = require('./config.json');
 
@@ -35,7 +33,7 @@ client.on("messageCreate", message => {
 // WELCOME MESSAGE FOR NEW MEMBERS
 client.on("guildMemberAdd", member => {
    console.log("Un nouveau membre est arrivé !");
-   client.channels.cache.get("853360863569510404").send("<@" + member.id + ">, bienvenu-e chez nous. Installe-toi, on est bien :) \n Nous te demandons de lire notre channel <#" + "933145585144455208" + "> s'il te plaît. Merci ♥" );
+   client.channels.cache.get("853360863569510404").send("<@" + member.id + ">, bienvenu-e chez nous. Installe-toi, on est bien :) \n Nous te demandons de lire notre channel <#" + "933145585144455208" + "> et de te présenter sur le channel <#" + "870061684067295263" + "> s'il te plaît. Merci ♥" );
 });
 
 client.login(token);
